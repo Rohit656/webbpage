@@ -21,25 +21,25 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %-------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%   PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
 %-------------------------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % You can have multiple style options the legal options ones are:
 %
-%   centered:	the name and address are centered at the top of the page
-%				(default)
+%   centered:   the name and address are centered at the top of the page
+%               (default)
 %
-%   line:		the name is the left with a horizontal line then the address to
-%				the right
+%   line:       the name is the left with a horizontal line then the address to
+%               the right
 %
-%   overlapped:	the section titles overlap the body text (default)
+%   overlapped: the section titles overlap the body text (default)
 %
-%   margin:		the section titles are to the left of the body text
+%   margin:     the section titles are to the left of the body text
 %
-%   11pt:		use 11 point fonts instead of 10 point fonts
+%   11pt:       use 11 point fonts instead of 10 point fonts
 %
-%   12pt:		use 12 point fonts instead of 10 point fonts
+%   12pt:       use 12 point fonts instead of 10 point fonts
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -57,7 +57,7 @@
 \begin{document}
 
 %-------------------------------------------------------------------------------
-%	NAME AND ADDRESS SECTION
+%   NAME AND ADDRESS SECTION
 %-------------------------------------------------------------------------------
 \name{Rohit Chatterjee}
 
@@ -69,7 +69,7 @@
 % Simulate as if there are 7 lines of address
 \address{\\\\\\\\Graduate Student\\Computer Science \& Engineering\\Stony Brook University\\Stony Brook, New York - 11794}
 % Hence the photo would take 7 lines/rows
-\address{\\\\\\\\rohitchatterjee94@gmail.com\\rochatterjee@cs.stonybrook.edu\\+1 (631) 579 5142}
+\address{\\\\\\\\rohitchatterjee94@gmail.com\\rochatterjee@cs.stonybrook.edu\\+1 (425) 457 9791}
 
 % Uncomment to add a third address
 %\address{rohitchatterjee94@gmail.com\\Address 3 line 2\\Address 3 line 3}
@@ -78,23 +78,25 @@
 \begin{resume}
 
 %-------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%   EDUCATION SECTION
 %-------------------------------------------------------------------------------
 \section{EDUCATION}
+
+\textbf{Stony Brook University}, Stony Brook, New York, USA\\
+{\sl PhD Program}, Computer Science \& Engineering Department. \\ Advisor: Prof. Omkant Pandey \\ GPA (current): 3.9/4
+\textit{(Ongoing - 6th year)}
+
 \textbf{Indian Institute of Science}, Bangalore, Karnataka, India\\
 {\sl Master of Science (Research)}, Undergraduate Department, 2017 (Math major)\hfill \newline
 GPA: 5.8/8
 
-\textbf{Stony Brook University}, Stony Brook, New York, USA\\
-{\sl PhD Program}, Computer Science \& Engineering Department. \\ Advisor: Prof. Omkant Pandey \\ GPA (current): 3.9/4
-\textit{(Ongoing - 5th year)}
 %-------------------------------------------------------------------------------
 
 %-------------------------------------------------------------------------------
-%	PROJECTS SECTION
+%   PROJECTS SECTION
 %-------------------------------------------------------------------------------
 
-\section{PUBLICATIONS \& MANUSCRIPTS}
+\section{PUBLICATIONS}
 
 \employer{With Xiao Liang \& Omkant Pandey }
 \location{}
@@ -113,28 +115,19 @@ We construct a $\max(R_\mathsf{OT},\widetilde{O}(\log n))$-round  MPC protocol s
 We present the first compact ring signature scheme (i.e., where the size of the signature grows logarithmically with the size of the ring) from the (plain) learning with errors (LWE) problem. The construction is in the standard model and it does not rely on a trusted setup or on the random oracle heuristic. At the heart of our scheme is a new construction of compact and statistically witness-indistinguishable ZAP arguments for $\mathsf{NP \cap coNP}$, that we show to be sound based on the plain LWE assumption. Prior to our work, statistical ZAPs (for all of NP) were known to exist only assuming sub-exponential hardness of LWE. 
 \end{position}
 
-\employer{With Kai-Min Chung, Xiao Liang \& Giulio Malavolta }
+\employer{With Kai-Min Chung, Xiao Liang, \& Giulio Malavolta}
 \location{}
+\vspace{1mm}
 \dates{{\it PKC 2022}}
 \title{\textbf{A Note on the Post-Quantum Security of (Ring) Signatures}}
 \begin{position}
-We consider signatures satisfying {\em blind-unforgeability} as recently proposed by Alagic et al.\ (Eurocrypt'20). We present two {\em short} signature schemes achieving this notion: one is in the quantum random oracle model, assuming quantum hardness of SIS; and the other is in the plain model, assuming quantum hardness of LWE with super-polynomial modulus. We further propose an analog of blind-unforgeability in the ring signature setting. Moreover, assuming the quantum hardness of LWE, we construct a compiler converting any blind-unforgeable (ordinary) signatures to a ring signature satisfying our definition. 
+We consider signatures satisfying blind-unforgeability as recently proposed by Alagic et al. (Eurocrypt’20). We present two short signature schemes achieving this notion: one is in the quantum random oracle model, assuming quantum hardness of SIS; and the other is in the plain model, assuming quantum hardness of LWE with super-polynomial modulus. We further propose an analog of blind-unforgeability in the ring signature setting. Moreover, assuming the quantum hardness of LWE, we construct a compiler converting any blind-unforgeable (ordinary) signatures to a ring signature satisfying our definition.
 \end{position}
 
-%\employer{With Xiao Liang \& Omkant Pandey }
-%\location{}
-%\dates{{\it In Submission}}
-%\title{\textbf{Round-Optimal Concurrent 2PC from Polynomial Hardness Assumptions}}
-%\begin{position}
-%We consider 2PC protocols in the {\em super-polynomial simulation in the universally composable model} (UC-SPS). On the negative side, we show that assuming the existence of non-interactive witness-indistinguishable proofs, 4 rounds are necessary for {\em asymmetric} (i.e., only one party receiving output) UC-SPS 2PC protocols that are based on black-box security reductions to {\em polynomial hardness assumptions}. Our techniques also extend to ruling out existence of {\em witness pseudo-random functions} (Zhandry, TCC'16) that can be proven secure via black-box reduction to {\em polynomial hardness assumptions}.
-
-%To complement our 2PC lower bound, we present a 4-round asymmetric {\em concurrent} UC-SPS 2PC protocol with black-box security proof, and based solely on polynomial hardness assumptions. Previous constructions of this primitive had the same round complexity but used super-polynomial hardness assumptions, while others were based on polynomial hardness but required additional rounds.  
- 
-%\end{position}
 
 
 
-
+\iffalse
 \section{RELEVANT COURSEWORK}
 \par
 \textbf{Mathematics}:
@@ -147,7 +140,7 @@ Algorithms and Programming, Automata Theory And Computability, Computational Com
 \par
 \textbf{Miscellaneous}:
 Foundations of Data Sciences, Information Theory, Concentration Inequalities, Information \& Communication Complexity
-
+\fi
 
 
 \iffalse
@@ -199,7 +192,7 @@ This project aimed to build upon a paper by Papadimitrou et al. which modelled s
 
 
 %-------------------------------------------------------------------------------
-%	COMPUTER SKILLS SECTION
+%   COMPUTER SKILLS SECTION
 %-------------------------------------------------------------------------------
 %-------------------------------------------------------------------------------
 \section{AWARDS AND ACHIEVEMENTS}
@@ -211,11 +204,11 @@ India in 2012 for showing promise in research in basic science (All India Rank: 
 
 \section{OTHER QUALIFICATIONS}
 
-\textbf{Programming Languages known}: Python, C, Java, R \\
+\textbf{Programming Languages known}: Python, Java, C, R \\
 \textbf{Courses TA'ed}: Modern Cryptography, Analysis of Algorithms, Foundations of Computer Science(UG)
 
 %-------------------------------------------------------------------------------
-%	EXPERIENCE SECTION
+%   EXPERIENCE SECTION
 %-------------------------------------------------------------------------------
 % Modify the format of each position
 \begin{format}
@@ -229,7 +222,7 @@ India in 2012 for showing promise in research in basic science (All India Rank: 
 
 \iffalse
 %-------------------------------------------------------------------------------
-%	Interests
+%   Interests
 %-------------------------------------------------------------------------------
 \section{RESEARCH INTERESTS}
 Secure Computation, Cryptography, Algorithms, Computational Complexity, Communication Complexity, Information Theory.
