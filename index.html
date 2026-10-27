@@ -1,12 +1,9 @@
+---
+---
 <!doctype html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    {% include head.html %}
 
     <style type="text/css">
     @media (min-width: 1200px) {
@@ -44,46 +41,10 @@
     </style>
 
 
-    <title>Rohit Chatterjee</title>
   </head>
   <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-7"><h1>Rohit Chatterjee</h1></div>
-            <div class="d-none d-lg-block col-lg-5 text-large"><span class="align-middle">
-                <div class="container-fluid">
-                <nav class="navbar navbar-collapse navbar-right navbar-expand-lg" style="overflow: break;">
-                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                      <span class="navbar-toggler-icon"></span>
-                    </button> -->
-                  
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                      <ul class="navbar-nav mr-auto align-items-end">
-                        <li class="nav-item">
-                          <a class="nav-link" href="#Publications">Publications</a>
-                        </li>
-                        <li class="nav-item">
-                          <a class="nav-link" href="blog/">Blog</a>
-                        </li>
-                        <!--<li class="nav-item">
-                          <a class="nav-link" href="content/cv_shetty.pdf">CV</a>
-                        </li>-->
-                        <!-- <li class="nav-item">
-                            <a class="nav-link" href="#Talks">Talks</a>
-                        </li> -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="#Contact">Contact</a>
-                        </li>
-                      </ul>
-                    </div>
-                </nav>
-                </div>
-                  </span>
-            </span>
-        </div>
-        </div>
-
-        <hr>
+        {% include header.html %}
 
         <div>
         <p style="float: right; clear: right;padding: 25px"><img src="mugshot2.jpeg" height="230" border="20" width="175" alt="profile"></p>
@@ -299,7 +260,7 @@
           </li>
         <hr>
 
-        <h3 id="Teaching">Service</h3> 
+        <h3 id="Service">Service</h3> 
         <p class="text-justify" style="padding-top: 10px;">
             <dl class="row">
                 <dt class="col-sm-3">Invited Reviewer</dt>
