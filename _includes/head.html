@@ -4,14 +4,47 @@
 <!-- Bootstrap CSS (same as index.html) -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
-<!-- KaTeX for math in posts -->
+<!-- Syntax highlighting for fenced code blocks (generated with `rougify style github`) -->
+<link rel="stylesheet" href="{{ '/assets/css/syntax.css' | relative_url }}">
+
+<!-- KaTeX for math in posts. Macros listed here work in every post; see BLOG_STYLE_GUIDE.md -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script>
+window.katexMacros = {
+    "\\negl": "\\mathsf{negl}",
+    "\\poly": "\\mathsf{poly}",
+    "\\secpar": "\\lambda",
+    "\\getsr": "\\xleftarrow{\\$}",
+    "\\zo": "\\{0,1\\}",
+    "\\Adv": "\\mathcal{A}",
+    "\\Sim": "\\mathsf{Sim}",
+    "\\PPT": "\\mathsf{PPT}",
+    "\\Gen": "\\mathsf{Gen}",
+    "\\Enc": "\\mathsf{Enc}",
+    "\\Dec": "\\mathsf{Dec}",
+    "\\Sign": "\\mathsf{Sign}",
+    "\\Vrfy": "\\mathsf{Vrfy}",
+    "\\N": "\\mathbb{N}",
+    "\\Z": "\\mathbb{Z}",
+    "\\F": "\\mathbb{F}",
+    "\\R": "\\mathbb{R}",
+    "\\E": "\\mathop{\\mathbb{E}}",
+    "\\abs": "\\left\\lvert #1 \\right\\rvert",
+    "\\norm": "\\left\\lVert #1 \\right\\rVert"
+};
+function renderMath() {
+    renderMathInElement(document.body, {
+        delimiters: [
+            {left: "\\[", right: "\\]", display: true},
+            {left: "\\(", right: "\\)", display: false}
+        ],
+        macros: window.katexMacros,
+        throwOnError: false
+    });
+}
+</script>
 <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
-<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
-    onload="renderMathInElement(document.body, {delimiters: [
-        {left: '\\[', right: '\\]', display: true},
-        {left: '\\(', right: '\\)', display: false}
-    ]});"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMath()"></script>
 
 <style type="text/css">
 @media (min-width: 992px) {
@@ -53,15 +86,72 @@
 .post-meta {
     color: #6c757d;
 }
+.post-title {
+    font-size: 2rem;
+    margin-bottom: 0.25rem;
+}
 .post-content {
     text-align: justify;
+}
+.post-content h2 {
+    font-size: 1.5rem;
+    margin-top: 2rem;
+}
+.post-content h3 {
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
 }
 .post-content pre {
     background: #f6f8fa;
     padding: 10px;
+    text-align: left;
 }
 .post-content img {
     max-width: 100%;
+}
+.post-content .katex-display {
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: 2px 0;
+}
+.post-content blockquote {
+    border-left: 4px solid #dee2e6;
+    padding: 0.25rem 1rem;
+    margin: 1rem 0;
+}
+.post-content blockquote.theorem {
+    border-left-color: #007bff;
+    background: #f5f9ff;
+}
+.post-content blockquote.definition {
+    border-left-color: #28a745;
+    background: #f6fbf7;
+}
+.post-content blockquote.remark {
+    border-left-color: #adb5bd;
+    background: #f8f9fa;
+}
+.post-content blockquote > :last-child {
+    margin-bottom: 0;
+}
+.post-content figure {
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.post-content figcaption {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+.post-content table {
+    margin: 1rem auto;
+    width: auto;
+}
+.post-content .footnotes {
+    font-size: 0.9rem;
+    border-top: 1px solid #dee2e6;
+    margin-top: 2rem;
+    padding-top: 0.5rem;
 }
 </style>
 

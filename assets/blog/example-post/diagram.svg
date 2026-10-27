@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 120" width="360" height="120" font-family="Helvetica, Arial, sans-serif" font-size="14">
+  <rect x="10" y="35" width="110" height="50" rx="6" fill="#f5f9ff" stroke="#007bff"/>
+  <text x="65" y="65" text-anchor="middle">Challenger</text>
+  <rect x="240" y="35" width="110" height="50" rx="6" fill="#f6fbf7" stroke="#28a745"/>
+  <text x="295" y="65" text-anchor="middle">Adversary</text>
+  <line x1="120" y1="50" x2="240" y2="50" stroke="#333" marker-end="url(#a)"/>
+  <line x1="240" y1="72" x2="120" y2="72" stroke="#333" marker-end="url(#a)"/>
+  <text x="180" y="44" text-anchor="middle" font-size="12">pk</text>
+  <text x="180" y="88" text-anchor="middle" font-size="12">guess b'</text>
+  <defs><marker id="a" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#333"/></marker></defs>
+</svg>

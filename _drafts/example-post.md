@@ -1,22 +1,88 @@
 ---
 title: An example post
-description: A template showing headings, math, and code. Move to _posts/ to publish.
+description: Shows every formatting feature from BLOG_STYLE_GUIDE.md. Drafts are never published.
 ---
 
-This is a draft. Files in `_drafts/` are not published. To publish a post, put it in
-`_posts/` with a name like `2026-10-27-my-title.md`; the date in the filename is the
-post date and the rest becomes the URL slug.
+This draft shows each formatting rule in `BLOG_STYLE_GUIDE.md`. Files in `_drafts/` are
+never published; to publish, move a file into `_posts/` as `YYYY-MM-DD-slug.md`.
 
-## Math
+## Inline math
 
-Write math between double dollar signs. Inline: $$\mathsf{Gen}(1^\lambda) \to (pk, sk)$$
-with $$\Pr[\mathcal{A} \text{ wins}] \le \tfrac{1}{2} + \mathsf{negl}(\lambda)$$.
+A scheme is secure if every $$\PPT$$ adversary $$\Adv$$ has advantage
+$$\Pr[\Adv(pk) = b] - \tfrac{1}{2} \le \negl(\secpar)$$, where $$x_1 * y_2$$ and *real emphasis*
+can share a line. Absolute values $$\abs{x}$$, norms $$\norm{\mathbf{e}}_\infty$$, conditioning $$\Pr[A \mid B]$$, sets
+$$\{x \in \zo^n : x_1 = 0\}$$, and comparisons $$a < b > c$$ all work. A plain dollar sign is
+written \$5.
 
-A display equation goes on its own paragraph:
+$$n$$ parties: a paragraph may start with inline math as long as text follows on the same line.
+
+## Display math
 
 $$
-\mathbf{A}\mathbf{s} + \mathbf{e} \approx_c \mathbf{u}, \qquad \mathbf{A} \leftarrow \mathbb{Z}_q^{m \times n}
+\mathbf{A} \getsr \Z_q^{m \times n}, \quad \mathbf{s} \getsr \Z_q^n, \quad
+(\mathbf{A}, \mathbf{A}\mathbf{s} + \mathbf{e}) \approx_c (\mathbf{A}, \mathbf{u})
 $$
+
+A macro used throughout one post can be defined once with `\gdef`:
+
+$$
+\gdef\Hyb{\mathsf{Hyb}}
+\Hyb_0 \approx_c \Hyb_1 \tag{1}
+$$
+
+Multi-line derivations use `aligned`, and the `\Hyb` macro defined above still works:
+
+$$
+\begin{aligned}
+\Pr[\Hyb_0 = 1] &= \Pr[\Hyb_1 = 1] \pm \negl(\secpar) \\
+&\le \tfrac{1}{2} + \negl(\secpar).
+\end{aligned}
+$$
+
+## Theorems and definitions
+
+> **Definition 1 (One-way function).** A function $$f : \zo^* \to \zo^*$$ is one-way if for
+> every $$\PPT$$ $$\Adv$$, $$\Pr_{x \getsr \zo^\secpar}[f(\Adv(f(x))) = f(x)] \le \negl(\secpar)$$.
+{: .definition}
+
+> **Theorem 2.** If one-way functions exist, then so do pseudorandom generators: for every
+> $$\ell = \poly(\secpar)$$ there is $$G : \zo^\secpar \to \zo^{\ell}$$ with
+>
+> $$
+> G(U_\secpar) \approx_c U_\ell.
+> $$
+{: .theorem}
+
+*Proof sketch.* Apply Goldreich–Levin, then stretch. $$\blacksquare$$
+
+> **Remark.** Remarks and asides use the plain grey box.
+{: .remark}
+
+## Lists
+
+1. Sample $$x \getsr \zo^\secpar$$.
+2. Compute
+
+   $$
+   y = f(x) \oplus h(r)
+   $$
+
+3. Output $$y$$.
+
+## Figure
+
+<figure>
+  <img src="{{ '/assets/blog/example-post/diagram.svg' | relative_url }}" alt="Challenger sends pk to the adversary, which returns a guess" style="max-width: 70%">
+  <figcaption>Figure 1. The IND-CPA game for \(\Enc\).</figcaption>
+</figure>
+
+## Table
+
+| Assumption | Post-quantum? | Reference |
+|---|:---:|---|
+| LWE | yes | [Reg05](https://arxiv.org/abs/2401.03703) |
+| DDH | no | — |
+{: .table .table-sm}
 
 ## Code
 
@@ -25,7 +91,8 @@ def keygen(n, q):
     return sample_matrix(n, q)
 ```
 
-## Links and images
+## Footnotes
 
-Link to a [paper](https://eprint.iacr.org/2025/250.pdf). Images go in a folder like
-`assets/` and are referenced as `{% raw %}![alt text]({{ '/assets/figure.png' | relative_url }}){% endraw %}`.
+This sentence has a footnote.[^lwe]
+
+[^lwe]: Footnotes go at the end of the post, and can contain math like $$q = \poly(n)$$.

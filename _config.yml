@@ -10,6 +10,8 @@ markdown: kramdown
 kramdown:
   # $$...$$ in Markdown becomes \(...\) inline or \[...\] display, rendered by KaTeX (see _includes/head.html)
   math_engine: mathjax
+  # Text-style return arrow in footnotes (otherwise macOS/iOS draw an emoji)
+  footnote_backlink: '&#8617;&#xfe0e;'
 
 plugins:
   - jekyll-feed
@@ -27,5 +29,6 @@ defaults:
 
 exclude:
   - README.md
+  - BLOG_STYLE_GUIDE.md
   - Gemfile
   - Gemfile.lock
