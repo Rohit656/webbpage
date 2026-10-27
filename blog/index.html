@@ -1,0 +1,21 @@
+---
+layout: default
+title: Blog
+---
+<h3>Blog</h3>
+<p class="post-meta">Subscribe via <a href="{{ '/blog/feed.xml' | relative_url }}">RSS</a>.</p>
+
+{% if site.posts.size > 0 %}
+<ul class="post-list list-unstyled">
+    {% for post in site.posts %}
+    <li>
+        <span class="text-large"><a href="{{ post.url | relative_url }}">{{ post.title }}</a></span>
+        <br>
+        <span class="post-meta">{{ post.date | date: "%B %-d, %Y" }}</span>
+        {% if post.description %}<br>{{ post.description }}{% endif %}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No posts yet.</p>
+{% endif %}

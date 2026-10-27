@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<!-- Bootstrap CSS (same as index.html) -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+<!-- KaTeX for math in posts -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {delimiters: [
+        {left: '\\[', right: '\\]', display: true},
+        {left: '\\(', right: '\\)', display: false}
+    ]});"></script>
+
+<style type="text/css">
+@media (min-width: 992px) {
+    .container{
+        max-width: 840px;
+    }
+}
+.text-large {
+    font-size: 112%;
+    font-weight: 500;
+}
+.site-nav a {
+    margin-left: 1rem;
+}
+.post-list li {
+    padding-bottom: 12px;
+}
+.post-meta {
+    color: #6c757d;
+}
+.post-content {
+    text-align: justify;
+}
+.post-content pre {
+    background: #f6f8fa;
+    padding: 10px;
+}
+.post-content img {
+    max-width: 100%;
+}
+</style>
+
+{% seo %}
+{% feed_meta %}

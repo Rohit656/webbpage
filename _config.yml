@@ -1,1 +1,31 @@
-theme: jekyll-theme-minimal
+title: Rohit Chatterjee
+description: Cryptography researcher. Homepage and blog.
+url: "https://rohit656.github.io"
+baseurl: "/webbpage"
+
+# Blog posts live in _posts/ as YYYY-MM-DD-slug.md and are served at /webbpage/blog/YYYY/MM/slug/
+permalink: /blog/:year/:month/:title/
+
+markdown: kramdown
+kramdown:
+  # $$...$$ in Markdown becomes \(...\) inline or \[...\] display, rendered by KaTeX (see _includes/head.html)
+  math_engine: mathjax
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: blog/feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
